@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+    <head>
+        <script>
+
+        function eqna_s(x1,y1,x2,y2){
+
+            if(isNaN(x1) || isNaN(x2) || isNaN(y1) || isNaN(y2)){
+                return undefined;
+            }
+            var a; 
+            var b;
+            var c;
+            let v = { 
+                a: y1-y2,
+                b: x1-x2,
+                c: x1*y2-x2-y1
+
+            };  
+            return Object.values(v); 
+
+        }
+        
+        function equala_ss(A1,B1,C1,A2,B2,C2){
+            if(A2/A1 === B2/B1 && B2/B1 === C2/C1){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        function eqnp_s(x1,y1,x2,y2){
+            var x,y;
+            var p = {
+                x1:x1,
+                y1:y1
+            };
+
+            var v = {
+                x:x2-x1,
+                y:y2-y1
+            };
+
+            var end = {
+                p:Object.values(p),
+                v:Object.values(v)
+            };
+
+            return "P = " + Object.values(p) + " e v = " + Object.values(v);
+        }
+
+        
+
+     
+        function main(){
+            let consola = document.getElementById("array")
+            consola.innerText = stats([1,2,3,4]);
+        }
+
+        </script>
+        
+
+
+    </head>
+
+    <body>
+        <p id ="array"> </p>
+        <script>
+        main();
+        </script>
+    
+    </body>
+</html>
