@@ -6,7 +6,7 @@
 
         function eqna_s(x1,y1,x2,y2){
 
-            if(isNaN(x1) || isNaN(x2) || isNaN(y1) || isNaN(y2)){
+            if((isNaN(x1) || isNaN(x2) || isNaN(y1) || isNaN(y2)) || (x1 === x2 && y1 === y2)){
                 return undefined;
             }
             var a; 
@@ -23,13 +23,59 @@
         }
         
         function equala_ss(A1,B1,C1,A2,B2,C2){
-            if(A2/A1 === B2/B1 && B2/B1 === C2/C1){
+            if(A1 === 0 && A2 === 0){
+                if(B1 === 0 && B2 === 0){
+                    if(C1 === 0 && C2 === 0){
+                        return false;
+                    }else{
+                        return true;
+                    }
+                }else if(C1 === 0 && C2 === 0){
+                    return true;
+                }else if(B1/B2 === C1/C2){
+                    return true;
+                }else{
+                    return false;
+                }
+            }else if(B1 === 0 & B2 === 0){
+                if(C1 === 0 && C2 === 0){
+                    return true;
+                }else if(A1/A2 === C1/C2){
+                    return true;
+                }else{
+                    return false;
+                }
+            }else if(C1 === 00 && C2 === 0){
+                if(A1/A2 === B1/B2){
+                    return true;
+                }else{
+                    return false;
+                }
+            }else if(A1/A2 === B1/B2 && B1/B2 === C1/C2){
                 return true;
             }else{
                 return false;
             }
+            
+            /*if(A1 === 0 && A2 === 0 && (B1/B2) === (C1/C2)){
+                return true;
+            }else if(B1 === 0 && B2 === 0 && (A1/A2) === (C1/C2)){
+                return true;
+            }else if(C1 === 0 && C2 === 0 && (B1/B2) === (A1/A2)){
+                return true;
+            }else if((A1/A2) === (B1/B2) && (B1/B2) === (C1/C2)){
+                return true;
+            }else{
+                return false;
+            }*/
+            
         }
 
+        
+
+
+
+            
         function eqnp_s(x1,y1,x2,y2){
             var x,y;
             var p = {
@@ -55,7 +101,7 @@
      
         function main(){
             let consola = document.getElementById("array")
-            consola.innerText = stats([1,2,3,4]);
+            consola.innerText = equala_ss(1,0,2,2,0,4);
         }
 
         </script>
