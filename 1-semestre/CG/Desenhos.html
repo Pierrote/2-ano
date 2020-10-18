@@ -7,7 +7,10 @@
             function um(gc){
                 gc.beginPath();
                     gc.moveTo(0,0);
-                    gc.quadraticCurveTo(64,0,64,64,16);
+                    gc.lineTo(32,0)
+                    gc.arcTo(64,0,64,64,16);
+                    gc.lineTo(64,64);
+                    gc.moveTo(0,64);
                     gc.strokeStyle = "red";
                     gc.stroke();
                 gc.closePath();
