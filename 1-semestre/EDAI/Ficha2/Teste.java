@@ -1,6 +1,7 @@
-import java.util.*;
-import java.lang.*;
-import Ficha1.*;
+import java.util.ArrayList;
+import java.util.Collection;
+
+
 
 public class Teste{
 

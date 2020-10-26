@@ -1,4 +1,4 @@
-package Ficha1;
+
 
 public class F{
 
