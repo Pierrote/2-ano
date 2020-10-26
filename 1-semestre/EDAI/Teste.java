@@ -39,7 +39,7 @@ public class Teste{
         //list.add(new Square(2));
 
 
-        System.out.println(maior(arr1));
+        System.out.println(maior(arr2));
         //list.forEach(System.out::println);
 
     }
