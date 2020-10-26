@@ -34,12 +34,12 @@ public class Fracções implements Comparable<Fracções>{
 
     public void setNum(int a){
         this.c = a;
-        
+
     }
 
     public void setDen(int a){
         this.d = a;
-        
+
     }
 
 
@@ -55,9 +55,9 @@ public class Fracções implements Comparable<Fracções>{
         if(d == 1){
             return "O resultado é: " + c;
         }else{
-            return "A fracção é: " + c + "/" + d; 
+            return "A fracção é: " + c + "/" + d;
         }
-        
+
     }
 
     public static int mdc(int dividendo, int divisor){
@@ -67,7 +67,7 @@ public class Fracções implements Comparable<Fracções>{
         }else{
 
             return mdc(divisor,(dividendo % divisor));
-          } 
+          }
     }
 
     public static int mmc(int num1, int num2){
@@ -76,23 +76,23 @@ public class Fracções implements Comparable<Fracções>{
         b = num2;
         do {
             resto = a % b;
-    
+
             a = b;
             b = resto;
-    
+
         } while (resto != 0);
-    
+
         return (num1*num2)/a;
-    
+
     }
 
     public void sum(Fracções f){
-        
+
         n1 = getNum();
         d1 = getDen();
         n2 = f.getNum();
         d2 = f.getDen();
-        
+
         if(d1 == d2){
             setFrac(n1+n2, d1);
         }else{
@@ -109,7 +109,7 @@ public class Fracções implements Comparable<Fracções>{
         d1 = getDen();
         n2 = f.getNum();
         d2 = f.getDen();
-        
+
         setFrac(n1*n2, d1*d2);
     }
 
@@ -128,11 +128,11 @@ public class Fracções implements Comparable<Fracções>{
         int m = mdc(c,d);
         setNum(c/m);
         setDen(d/m);
-        
+
     }
 
     public int compareTo(Fracções f){
-       
+
         float x = (float) this.getNum()/this.getDen();
         float y = (float) f.getNum()/f.getDen();
         if (x<y){
@@ -147,10 +147,10 @@ public class Fracções implements Comparable<Fracções>{
     }
 
     public static void main(String[] agrs){
- 
+
         Fracções f1 = new Fracções(3);
         Fracções f2 = new Fracções(1);
-        
+
         System.out.println(f1.compareTo(f2));
     }
 

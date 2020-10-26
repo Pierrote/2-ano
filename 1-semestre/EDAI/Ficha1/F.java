@@ -1,8 +1,10 @@
+package Ficha1;
+
 public class F{
 
     int n;
     int count = 0;
-    
+
 
     public int fibo(int n){
 

@@ -1,5 +1,6 @@
 import java.util.*;
 import java.lang.*;
+import Ficha1.*;
 
 public class Teste{
 
