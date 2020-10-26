@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <script>
+            function main(){
+                let chocolate = document.getElementById("bombocas")
+                                        .getContext("2d");
+                chocolate.innerText = demo_grads(chocolate);
+
+                let ff = document.getElementById("c");
+                ff.innerText = fds();
+            }
+
+            function fds(){
+                return "fds";
+            }
+
+            function demo_grads(c) {
+    let g = c.createLinearGradient(0,0,64,0);
+    g.addColorStop(0.2, "steelblue");
+    g.addColorStop(0.2, "crimson");
+    g.addColorStop(0.8, "seagreen");
+    g.addColorStop(1.0, "khaki");
+    c.fillStyle = g;
+    c.fillRect(0,0,64,12);
+}
+        </script>
+       
+    </head>
+
+    <body>
+        <canvas id="bombocas"
+                height=300
+                width=300>
+            <script>
+                main();
+            </script>
+        </canvas>
+        <p id="c">
+            <script>
+                main();
+            </script>
+        </p>
+            
+    </body>
+</html>
