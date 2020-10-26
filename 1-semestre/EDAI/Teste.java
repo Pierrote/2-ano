@@ -1,7 +1,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class Teste implements Comparable<Shape>{
+public class Teste{
 
     public static void main(String[] args){
 
@@ -39,12 +39,12 @@ public class Teste implements Comparable<Shape>{
         //list.add(new Square(2));
 
 
-        System.out.println(Shape.maior(arr1));
+        System.out.println(maior(arr1));
         //list.forEach(System.out::println);
 
     }
 
-    /*public static < Shape extends Comparable <? super Shape>> Shape  maior(Shape[] array){
+    public static < Shape extends Comparable <? super Shape>> Shape maior(Shape[] array){
 
         int n = 0;
 
@@ -55,16 +55,7 @@ public class Teste implements Comparable<Shape>{
         }
 
         return array[n];
-    }*/
-
-    public interface Comparable<Shape>{
-        public abstract Shape maior(Shape[] o);
-
-        @Override
-        public int compareTo(Shape o);
-
     }
-
 
 
 }
